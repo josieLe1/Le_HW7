@@ -34,13 +34,20 @@ const getCharacters = houseCode => {
   }
 };
 
-let select = document.getElementById("house")
-let options = houses.map(a => a.name)
-
-for (let i = 0; i < options.length; i++) {
-  const opt = options[i] 
-  const element = document.createElement('option')
-  element.textContent = opt
-  //element.value = opt
-  select.appendChild(element)
+for (let i = 0; i < houses.length; i++) { 
+  const names = document.createElement('option')
+  names.value = houses[i].code
+  names.textContent = houses[i].name
+  document.getElementById('house').appendChild(names)
 }
+
+const formElement = document.querySelector("form");
+
+formElement.addEventListener("change", e => {
+  console.log(`House characters: ${getCharacters(e.target.value)}`);
+  getCharacters(e.target.value).forEach(element => {
+    const liElem = document.createElement("li");
+    liElem.textContent = element;
+    document.getElementById("characters").appendChild(liElem);
+  });
+});

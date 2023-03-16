@@ -26,3 +26,23 @@ for (let i=0; i< btns.length; i ++) {
 }
 
 
+
+//  for (let i=0; i< questions.length; i ++) {
+//   const para = document.createElement('div')
+//   para.textContent = "{Question [i]}"+ ":" + questions[i].statement
+//   para.value=questions[i].answer
+//   var btn = document.createElement("button")
+//   btn.textContent = "Show Answer"
+//   btn.addEventListener("click", e => {
+//     questions.forEach(element => {
+//       const liElement = document.createElement ("ul")
+//       liElement.textContent = element
+//       document.getElementById("content").appendChild(liElement)
+//     });
+//    })
+//   document.getElementById("content").append(para, btn)
+//  }
+ 
+
+
+ 
